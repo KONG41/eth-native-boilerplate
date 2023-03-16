@@ -4,7 +4,7 @@ import MoralisDappContext from './context';
 
 function MoralisDappProvider({children}) {
   const {web3, Moralis, user} = useMoralis();
-  const [walletAddress, setWalletAddress] = useState("0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045");
+  const [walletAddress, setWalletAddress] = useState();
   const [chainId, setChainId] = useState();
   useEffect(() => {
     Moralis.onChainChanged(function (chain) {

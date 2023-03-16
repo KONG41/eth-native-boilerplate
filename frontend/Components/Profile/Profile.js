@@ -42,13 +42,11 @@ const Profile = ({ navigation }) => {
           }}
           onPress={logoutUser}
           loadingProps={{ animating: true }}>
-
-          </Button>
+        </Button>
       </View>
     </View>
   );
 };
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,

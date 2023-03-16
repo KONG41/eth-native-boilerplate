@@ -5,10 +5,10 @@ const useERC20Balance = (props) => {
   const { account } = useMoralisWeb3Api();
   const { isInitialized } = useMoralis();
   const { walletAddress, chainId } = useMoralisDapp();
-
   const [assets, setAssets] = useState();
 
   useEffect(() => {
+    
     if (isInitialized) {
       fetchERC20Balance()
         .then((balance) => setAssets(balance))
@@ -26,6 +26,7 @@ const useERC20Balance = (props) => {
       .then((result) => result)
       .catch((e) => alert(e.message));
   };
+
   return { fetchERC20Balance, assets };
 };
 

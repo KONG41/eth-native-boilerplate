@@ -64,7 +64,7 @@ export default function WalletConnectProvider({
         const canOpenURL = await Linking.canOpenURL(uri);
         if (!canOpenURL) {
           // Redirect the user to download a wallet.
-          Linking.openURL('https://walletconnect.org/wallets');
+          Linking.openURL('https://walletconnect.com/registry?type=wallet');
           throw new Error('No wallets found.');
         }
         await Linking.openURL(uri);

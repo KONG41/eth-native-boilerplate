@@ -12,10 +12,7 @@ import {Platform} from 'react-native';
 import {MoralisDappProvider} from './providers/MoralisDappProvider/MoralisDappProvider';
 import {ApplicationProvider, Layout, Text} from '@ui-kitten/components';
 import * as eva from '@eva-design/eva';
-import {
-  REACT_APP_MORALIS_APPLICATION_ID,
-  REACT_APP_MORALIS_SERVER_URL,
-} from '@env';
+// import { REACT_APP_MORALIS_APPLICATION_ID, REACT_APP_MORALIS_SERVER_URL } from '@env';
 
 interface ProvidersProps {
   readonly children: JSX.Element;
@@ -24,8 +21,10 @@ interface ProvidersProps {
 /**
  * Initialization of Moralis
  */
-const appId = REACT_APP_MORALIS_APPLICATION_ID;
-const serverUrl = REACT_APP_MORALIS_SERVER_URL;
+// const appId = REACT_APP_MORALIS_APPLICATION_ID;
+// const serverUrl = REACT_APP_MORALIS_SERVER_URL;
+const appId = '001';
+const serverUrl = 'http://localhost:1337/server';
 const environment = 'native';
 // Initialize Moralis with AsyncStorage to support react-native storage
 Moralis.setAsyncStorage(AsyncStorage);

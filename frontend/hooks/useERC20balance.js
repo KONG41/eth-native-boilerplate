@@ -26,7 +26,6 @@ const useERC20Balance = (props) => {
       .then((result) => result)
       .catch((e) => alert(e.message));
   };
-
   return { fetchERC20Balance, assets };
 };
 

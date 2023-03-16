@@ -30,7 +30,7 @@ function MoralisDappProvider({children}) {
     // USE THIS TO SKIP LOGIN THROUGH WALLET (FOR DEVELOPMENT PURPOSES)
     // <MoralisDappContext.Provider
     //   value={{
-    //     walletAddress: '0x29684Ca7D10F82b9dC7E5a447e33e7A99e10813F',
+    //     walletAddress: '0x47d408c3598D567e155FdbA1162f579a5854Ec9c',
     //     chainId: '0x1',
     //   }}>
     //   {children}

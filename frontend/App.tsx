@@ -128,11 +128,11 @@ function App(): JSX.Element {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Auth">
         {/* Auth Navigator: Include Login and Signup */}
-        <Stack.Screen
+        {/* <Stack.Screen
           name="Auth"
           component={CryptoAuth}
           options={{ headerShown: false }}
-        />
+        /> */}
         {/* Navigation Drawer as a landing page */}
         <Stack.Screen
           name="DrawerNavigationRoutes"

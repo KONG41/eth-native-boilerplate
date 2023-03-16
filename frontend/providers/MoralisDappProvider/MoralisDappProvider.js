@@ -4,7 +4,7 @@ import MoralisDappContext from './context';
 
 function MoralisDappProvider({children}) {
   const {web3, Moralis, user} = useMoralis();
-  const [walletAddress, setWalletAddress] = useState();
+  const [walletAddress, setWalletAddress] = useState("0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045");
   const [chainId, setChainId] = useState();
   useEffect(() => {
     Moralis.onChainChanged(function (chain) {
@@ -30,7 +30,7 @@ function MoralisDappProvider({children}) {
     // USE THIS TO SKIP LOGIN THROUGH WALLET (FOR DEVELOPMENT PURPOSES)
     // <MoralisDappContext.Provider
     //   value={{
-    //     walletAddress: '0x47d408c3598D567e155FdbA1162f579a5854Ec9c',
+    //     walletAddress: '0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045',
     //     chainId: '0x1',
     //   }}>
     //   {children}

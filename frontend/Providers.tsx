@@ -8,7 +8,6 @@ import WalletConnectProvider, {
 } from './WalletConnect';
 import {Platform} from 'react-native';
 //import Qrcode from "./Qrcode";
-//import { expo } from "../app.json";
 import {MoralisDappProvider} from './providers/MoralisDappProvider/MoralisDappProvider';
 import {ApplicationProvider, Layout, Text} from '@ui-kitten/components';
 import * as eva from '@eva-design/eva';
@@ -25,7 +24,7 @@ interface ProvidersProps {
  * Initialization of Moralis
  */
 const appId = "001";
-const serverUrl = "http://localhost:1337/server";
+const serverUrl = "http://192.168.0.154:1337/server";
 // const appId = REACT_APP_MORALIS_APPLICATION_ID;
 // const serverUrl = REACT_APP_MORALIS_SERVER_URL;
 const environment = 'native';

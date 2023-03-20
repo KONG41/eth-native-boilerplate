@@ -10,16 +10,16 @@ const useNativeBalance = chain => {
   const {walletAddress, chainId} = useMoralisDapp();
   const [nativeBalance, setNativeBalance] = useState();
   const [assets, setAssets] = useState();
-
+  
   useEffect(() => {
     if (isInitialized) {
       //pick from passed down chain into component or default app level chain
       const chainFinal = chain || chainId;
-      const native = getNativeByChain(chainFinal);
+      const native = getNativeByChain(chainFinal); //convert chain ID to chain text
 
       fetchNativeBalance()
         .then(result => {
-          //   console.log('BALANCE', result);
+          console.log('BALANCE', result);
           const balanceInWei = Moralis.Units.FromWei(result.balance);
           const balanceFormatted = `${n4.format(balanceInWei)} ${native}`;
           setNativeBalance(balanceFormatted);

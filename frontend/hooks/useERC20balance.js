@@ -11,7 +11,8 @@ const useERC20Balance = (props) => {
     
     if (isInitialized) {
       fetchERC20Balance()
-        .then((balance) => setAssets(balance))
+        .then((balance) => {
+        setAssets(balance)})
         .catch((e) => alert(e.message));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -26,8 +27,7 @@ const useERC20Balance = (props) => {
       .then((result) => result)
       .catch((e) => alert(e.message));
   };
-
-  return { fetchERC20Balance, assets };
+  return { fetchERC20Balance, assets};
 };
 
 export default useERC20Balance;
